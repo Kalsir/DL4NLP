@@ -1,4 +1,4 @@
-# Mostly copied from https://www.curiousily.com/posts/sentiment-analysis-with-bert-and-hugging-face-using-pytorch-and-python/
+# BERT parts mostly copied from https://www.curiousily.com/posts/sentiment-analysis-with-bert-and-hugging-face-using-pytorch-and-python/
 
 import pandas as pd
 import numpy as np
@@ -14,8 +14,10 @@ import tqdm
 BATCH_SIZE = 8
 MAX_LEN = 128
 PRETRAINED_MODEL_NAME = 'bert-base-uncased'
-EPOCHS = 10
+EPOCHS = 30
 FINE = False
+MODEL = 'LSTM' #Bert or LSTM
+UNCERTAINTY_PASSES = 100
 
 # Some utility classes/functions
 class QCDataset(Dataset):
@@ -40,12 +42,14 @@ class QCDataset(Dataset):
       padding = 'max_length',
       return_attention_mask=True,
       return_tensors='pt',
+      return_length = True
     )
 
     return {
       'questions': question,
       'input_ids': encoding['input_ids'].flatten(),
       'attention_mask': encoding['attention_mask'].flatten(),
+      'text_lengths' : encoding['length'].flatten().squeeze(),
       'types': torch.tensor(target, dtype=torch.long)
     }
 
@@ -65,12 +69,12 @@ def create_data_loader(df, tokenizer, max_len, batch_size, fine = False):
     batch_size=batch_size,
   )
 
-class QClassifier(nn.Module):
+class BertClassifier(nn.Module):
   def __init__(self, n_classes):
-    super(QClassifier, self).__init__()
+    super(BertClassifier, self).__init__()
     self.bert = BertModel.from_pretrained(PRETRAINED_MODEL_NAME)
     self.drop = nn.Dropout(p=0.3)
-    self.out = nn.Linear(self.bert.config.hidden_size, n_classes)
+    self.fc = nn.Linear(self.bert.config.hidden_size, n_classes)
 
   def forward(self, input_ids, attention_mask):
     _, pooled_output = self.bert(
@@ -78,7 +82,34 @@ class QClassifier(nn.Module):
       attention_mask=attention_mask
     )
     output = self.drop(pooled_output)
-    return self.out(output)
+    return self.fc(output)
+
+class LSTMClassifier(nn.Module):
+    def __init__(self, vocab_size, n_classes, embedding_dim = 768, hidden_dim = 768, n_layers = 2, 
+                 bidirectional = True, dropout = 0.2):
+        super(LSTMClassifier, self).__init__()          
+        self.embedding = nn.Embedding(vocab_size, embedding_dim)
+        self.lstm = nn.LSTM(embedding_dim, 
+                           hidden_dim, 
+                           num_layers=n_layers, 
+                           bidirectional=bidirectional, 
+                           dropout=dropout,
+                           batch_first=True)
+        if bidirectional:
+        	self.fc = nn.Linear(hidden_dim * 2, n_classes)
+        else:
+        	self.fc = nn.Linear(hidden_dim, n_classes)
+        self.bidirectional = bidirectional
+        
+    def forward(self, input_ids, text_lengths):
+        embedded = self.embedding(input_ids)
+        packed_embedded = nn.utils.rnn.pack_padded_sequence(embedded, text_lengths, batch_first=True)
+        packed_output, (hidden, cell) = self.lstm(packed_embedded)
+        if self.bidirectional:
+        	hidden = torch.cat((hidden[-2,:,:], hidden[-1,:,:]), dim = 1)
+        else:
+        	hidden = hidden[-1,:,:]
+        return self.fc(hidden)   
 
 def train_epoch(
   model,
@@ -96,12 +127,13 @@ def train_epoch(
   progress_bar = tqdm.tqdm(total=len(data_loader), desc='Batches')
   for d in data_loader:
     input_ids = d["input_ids"].to(device)
-    attention_mask = d["attention_mask"].to(device)
     targets = d["types"].to(device)
-    outputs = model(
-      input_ids=input_ids,
-      attention_mask=attention_mask
-    )
+    if MODEL == 'LSTM':
+    	text_lengths = d["text_lengths"].to(device)
+    	outputs = model(input_ids, text_lengths)
+    else:
+    	attention_mask = d["attention_mask"].to(device)
+    	outputs = model(input_ids, attention_mask)
     _, preds = torch.max(outputs, dim=1)
     loss = loss_fn(outputs, targets)
     correct_predictions += torch.sum(preds == targets)
@@ -114,6 +146,31 @@ def train_epoch(
     progress_bar.update()
   return correct_predictions.double() / n_examples, np.mean(losses)
 
+def eval_uncertainty(model, data_loader, loss_fn, device, n_examples, label_encoder):
+	model = model.train()
+	for d in data_loader:
+		input_ids = d["input_ids"].to(device)
+		attention_mask = d["attention_mask"].to(device)
+		targets = d["types"].to(device)
+		if MODEL == 'LSTM':
+			secondary =d["text_lengths"].to(device)
+		else:
+			secondary = d["attention_mask"].to(device)
+			outputs = model(input_ids, attention_mask)
+		pred_list = []
+		for i in range(UNCERTAINTY_PASSES):
+			outputs = model(input_ids, secondary)
+			_, pred = torch.max(outputs, dim=1)
+			pred_list.append(pred)
+		unique, counts = torch.unique(torch.stack(pred_list), return_counts = True)
+		most_frequent = counts.argmax()
+		prediction = unique[most_frequent]
+		certainty = counts[most_frequent].item()/UNCERTAINTY_PASSES
+		print("Question:", d["questions"])
+		print("Predicted Type:", label_encoder.inverse_transform([prediction.cpu().item()]))
+		print("Actual Type:", label_encoder.inverse_transform([d["types"].item()]))
+		print("Certainty:", certainty)
+
 def eval_model(model, data_loader, loss_fn, device, n_examples):
   model = model.eval()
   losses = []
@@ -124,10 +181,12 @@ def eval_model(model, data_loader, loss_fn, device, n_examples):
       input_ids = d["input_ids"].to(device)
       attention_mask = d["attention_mask"].to(device)
       targets = d["types"].to(device)
-      outputs = model(
-        input_ids=input_ids,
-        attention_mask=attention_mask
-      )
+      if MODEL == 'LSTM':
+      	text_lengths =d["text_lengths"].to(device)
+      	outputs = model(input_ids, text_lengths)
+      else:
+      	attention_mask = d["attention_mask"].to(device)
+      	outputs = model(input_ids, attention_mask)
       _, preds = torch.max(outputs, dim=1)
       loss = loss_fn(outputs, targets)
       correct_predictions += torch.sum(preds == targets)
@@ -161,13 +220,17 @@ tokenizer = BertTokenizer.from_pretrained(PRETRAINED_MODEL_NAME)
 # Create dataloaders
 train_data_loader = create_data_loader(train, tokenizer, MAX_LEN, BATCH_SIZE, FINE)
 test_data_loader = create_data_loader(test, tokenizer, MAX_LEN, BATCH_SIZE, FINE)
+test_uncertainty_data_loader = create_data_loader(test, tokenizer, MAX_LEN, 1, FINE)
 
 # Setup GPU
 print("GPU available:", torch.cuda.is_available())
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # Create model and move it to GPU
-model = QClassifier(num_classes)
+if MODEL == 'LSTM':
+	model = LSTMClassifier(tokenizer.vocab_size, num_classes)
+else:
+	model = BertClassifier(num_classes)
 model = model.to(device)
 
 # Setup optimizer/scheduler/loss function
@@ -208,3 +271,13 @@ test_acc, test_loss = eval_model(
     len(test)
   )
 print(f'Test loss {test_loss} accuracy {test_acc}')
+
+# Evaluate uncertainty
+eval_uncertainty(
+    model,
+    test_uncertainty_data_loader,
+    loss_fn,
+    device,
+    len(test),
+    le2
+  )
