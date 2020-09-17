@@ -14,10 +14,11 @@ import tqdm
 BATCH_SIZE = 8
 MAX_LEN = 128
 PRETRAINED_MODEL_NAME = 'bert-base-uncased'
-EPOCHS = 30
+EPOCHS = 2
 FINE = False
-MODEL = 'LSTM' #Bert or LSTM
+MODEL = 'BERT' #Bert or LSTM
 UNCERTAINTY_PASSES = 100
+TRAINING_FILE = "train_1000.csv"
 
 # Some utility classes/functions
 class QCDataset(Dataset):
@@ -195,7 +196,7 @@ def eval_model(model, data_loader, loss_fn, device, n_examples):
   return correct_predictions.double() / n_examples, np.mean(losses)
 
 # Load train and test data
-train = pd.read_csv("train_1000.csv")
+train = pd.read_csv(TRAINING_FILE)
 test = pd.read_csv("test_500.csv")
 
 # Encode question types as numbers
