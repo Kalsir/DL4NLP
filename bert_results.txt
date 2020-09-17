@@ -1,0 +1,93 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 100
+Epochs: 5
+Training file: train_1000.csv
+Batch size: 8
+Dropout: 0.3 
+Train loss 0.7947648976445199 accuracy 0.721
+
+Train loss 0.19793215993791818 accuracy 0.9470000000000001
+
+Train loss 0.06194172560051084 accuracy 0.985
+
+Train loss 0.030302129442803562 accuracy 0.995
+
+Train loss 0.018778273995034397 accuracy 0.997
+
+Test loss 0.19489162121640724 accuracy 0.964
+
+Question:What is the longest major league baseball-winning streak ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.96
+Question:What is the major fault line near Kentucky ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What position did Willie Davis play in baseball ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What is natural gas composed of ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.69
+Question:What is the sales tax in Minnesota ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.79
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.99
+Question:What is plastic made of ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.66
+Question:What is the longest suspension bridge in the U.S. ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.94
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:Mexican pesos are worth what in U.S. dollars ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What does a barometer measure ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is TMJ ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What monastery was raided by Vikings in the late eighth century ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.7
+Question:What does the abbreviation SOS mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:0.52
+Question:What did Jesse Jackson organize ?
+Predicted Type:DESC
+Actual Type:HUM
+Certainty:0.86
+Question:What is the source of natural gas ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.83

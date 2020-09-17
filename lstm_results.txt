@@ -1,0 +1,612 @@
+Hyperparameters
+Model: LSTM
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 10
+Training file: train_1000.csv
+Batch size: 8
+Dropout: 0.2
+
+Train loss 1.3039702973365783 accuracy 0.484
+
+Train loss 0.818804369688034 accuracy 0.721
+
+Train loss 0.5792596242427825 accuracy 0.807
+
+Train loss 0.41068231096863744 accuracy 0.872
+
+Train loss 0.28813854154199364 accuracy 0.922
+
+Train loss 0.2165186193175614 accuracy 0.934
+
+Train loss 0.16753798901289702 accuracy 0.9530000000000001
+
+Train loss 0.13987573970854283 accuracy 0.9590000000000001
+
+Train loss 0.11698003844916821 accuracy 0.967
+
+Train loss 0.1005510546900332 accuracy 0.974
+
+Test loss 1.059362506346097 accuracy 0.708
+
+Question:George Bush purchased a small interest in which baseball team ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What is Australia 's national flower ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What person 's head is on a dime ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What is the average weight of a Yellow Labrador ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What metal has the highest melting point ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What hemisphere is the Philippines in ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:1.0
+Question:What is amitriptyline ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.94
+Question:Which comedian 's signature line is `` Can we talk '' ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What is fibromyalgia ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What is done with worn or outdated flags ?
+Predicted Type:LOC
+Actual Type:DESC
+Certainty:1.0
+Question:What is the capital of Yugoslavia ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:1.0
+Question:What is the speed hummingbirds fly ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.96
+Question:What river flows between Fargo , North Dakota and Moorhead , Minnesota ?
+Predicted Type:HUM
+Actual Type:LOC
+Certainty:0.6
+Question:What do bats eat ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What strait separates North America from Asia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is the population of Seattle ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What is the population of China ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What is amoxicillin ?
+Predicted Type:NUM
+Actual Type:DESC
+Certainty:0.98
+Question:What are xerophytes ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:The U.S. Department of Treasury first issued paper currency for the U.S. during which war ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.98
+Question:What is the oldest university in the US ?
+Predicted Type:NUM
+Actual Type:HUM
+Certainty:0.54
+Question:What county is Phoenix , AZ in ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:1.0
+Question:The sun 's core , what is the temperature ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What is the Ohio state bird ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.76
+Question:What is acupuncture ?
+Predicted Type:LOC
+Actual Type:DESC
+Certainty:1.0
+Question:What is the length of the coastline of the state of Alaska ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:1.0
+Question:What is the name of Neil Armstrong 's wife ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What is Hawaii 's state flower ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What mineral helps prevent osteoporosis ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.92
+Question:What is the diameter of a golf ball ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:1.0
+Question:What is the earth 's diameter ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:1.0
+Question:During which season do most thunderstorms occur ?
+Predicted Type:HUM
+Actual Type:NUM
+Certainty:0.94
+Question:What is the gestation period for a cat ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:1.0
+Question:What is foreclosure ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.94
+Question:What position did Willie Davis play in baseball ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What is severance pay ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.94
+Question:What is poliomyelitis ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:What were Christopher Columbus ' three ships ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.68
+Question:What are sunspots ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:What continent is Egypt on ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is the capital of Mongolia ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.98
+Question:In the late 1700 's British convicts were used to populate which colony ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.98
+Question:What peninsula is Spain part of ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is acetaminophen ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:How fast is alcohol absorbed ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What body of water are the Canary Islands in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is natural gas composed of ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What French ruler was defeated at the battle of Waterloo ?
+Predicted Type:NUM
+Actual Type:HUM
+Certainty:1.0
+Question:What is the birthstone for June ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the sales tax in Minnesota ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the distance in miles from the earth to the sun ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What is the average life span for a chicken ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What currency is used in Algeria ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What was the most popular toy in 1957 ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the melting point of copper ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.86
+Question:What is the average body temperature ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What province is Montreal in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.94
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.96
+Question:Which mountain range in North America stretches from Maine to Georgia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is the population of Nigeria ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.96
+Question:What are the two houses of the Legislative branch ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the location of the Sea of Tranquility ?
+Predicted Type:NUM
+Actual Type:LOC
+Certainty:1.0
+Question:How fast is sound ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.52
+Question:What is Valentine 's Day ?
+Predicted Type:NUM
+Actual Type:DESC
+Certainty:0.5
+Question:What are the twin cities ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.74
+Question:What is the statue of liberty made of ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.72
+Question:What planet is known as the `` red '' planet ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is the depth of the Nile river ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:0.96
+Question:Mexican pesos are worth what in U.S. dollars ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:1.0
+Question:What is the capital of Ethiopia ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.42
+Question:What is osteoporosis ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:What year did Oklahoma become a state ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.9
+Question:What is the abbreviation for Texas ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:0.78
+Question:What was J.F.K. 's wife 's name ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What does I.V. stand for ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What is pulmonary fibrosis ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.98
+Question:What are Quaaludes ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:What is naproxen ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:How old do you have to be in order to rent a car in Italy ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What does a barometer measure ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What year did the NFL go on strike ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What date did Neil Armstrong land on the moon ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:1.0
+Question:What planet has the strongest magnetic field of all the planets ?
+Predicted Type:HUM
+Actual Type:LOC
+Certainty:0.78
+Question:What is the capital of Persia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is the deepest lake in the US ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:1.0
+Question:What is TMJ ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What date was Dwight D. Eisenhower born ?
+Predicted Type:HUM
+Actual Type:NUM
+Certainty:0.82
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What is the conversion rate between dollars and pounds ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What is the name of William Penn 's ship ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the melting point of gold ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.92
+Question:What is the street address of the White House ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is Ursa Major ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:What was President Lyndon Johnson 's reform program called ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the murder rate in Windsor , Ontario ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:1.0
+Question:What is the population of Australia ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:Name a stimulant .
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.8
+Question:What is the effect of volcanoes on the climate ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:What is the date of Mexico 's independence ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:1.0
+Question:What is the location of Lake Champlain ?
+Predicted Type:NUM
+Actual Type:LOC
+Certainty:0.5
+Question:What is the Illinois state flower ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.52
+Question:What is Maryland 's state bird ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.96
+Question:What is quicksilver ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.82
+Question:What is the width of a football field ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.98
+Question:What is acetic acid ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.94
+Question:What is the elevation of St. Louis , MO ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What are the colors of the German flag ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.94
+Question:What is the Moulin Rouge ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is the atomic weight of silver ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What currency do they use in Brazil ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.52
+Question:What is mad cow disease ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.92
+Question:What birthstone is turquoise ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.86
+Question:What is propylene glycol ?
+Predicted Type:LOC
+Actual Type:DESC
+Certainty:1.0
+Question:What is the world 's population ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:1.0
+Question:What is nepotism ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.92
+Question:Developing nations comprise what percentage of the world 's population ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:1.0
+Question:What is Shakespeare 's nickname ?
+Predicted Type:LOC
+Actual Type:HUM
+Certainty:1.0
+Question:What is the heaviest naturally occurring element ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the capital of Zimbabwe ?
+Predicted Type:NUM
+Actual Type:LOC
+Certainty:0.84
+Question:What is the state flower of Michigan ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.86
+Question:What are Canada 's two territories ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:1.0
+Question:What continent is Argentina on ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:1.0
+Question:What is the spirometer test ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:What does the abbreviation SOS mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What is the smallest bird in Britain ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.7
+Question:What is the active ingredient in baking soda ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What did Jesse Jackson organize ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What is New York 's state bird ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the National Park in Utah ?
+Predicted Type:NUM
+Actual Type:LOC
+Certainty:1.0
+Question:What is Susan B. Anthony 's birthday ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:1.0
+Question:What chain store is headquartered in Bentonville , Arkansas ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What are solar cells ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.98
+Question:What currency does Luxembourg use ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What currency does Argentina use ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What color are crickets ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.96
+Question:What was the name of the first U.S. satellite sent into space ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.96
+Question:What is rheumatoid arthritis ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:1.0
+Question:What river runs through Rowe , Italy ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.94
+Question:What is the source of natural gas ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:In what spacecraft did U.S. astronaut Alan Shepard make his historic 1961 flight ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is bio-diversity ?
+Predicted Type:LOC
+Actual Type:DESC
+Certainty:0.68
+Question:What year did the Titanic start on its journey ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.94
+Question:What is the money they use in Zambia ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.86
+Question:What is the birthstone of October ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.92

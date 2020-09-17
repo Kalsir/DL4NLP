@@ -1,0 +1,89 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 5
+Training file: train_5500.csv
+Batch size: 8
+Dropout: 0.3 
+Train loss 0.42827403192105223 accuracy 0.8723404255319149
+
+Train loss 0.10887831613574044 accuracy 0.9750550256786501
+
+Train loss 0.051090572420162864 accuracy 0.9900953778429934
+
+Train loss 0.025182880310149168 accuracy 0.994314013206163
+
+Train loss 0.010546550983889097 accuracy 0.9972487160674982
+
+Test loss 0.23273904794006653 accuracy 0.966
+
+Question:What is the longest major league baseball-winning streak ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.82
+Question:What is the major fault line near Kentucky ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.9
+Question:In the late 1700 's British convicts were used to populate which colony ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.74
+Question:What is the birthstone for June ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.64
+Question:What is the sales tax in Minnesota ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.94
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:1.0
+Question:What are the two houses of the Legislative branch ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.96
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What are the twin cities ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:1.0
+Question:Where on the body is a mortarboard worn ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.82
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What is the melting point of gold ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.64
+Question:What monastery was raided by Vikings in the late eighth century ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:How cold should a refrigerator be ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.86
+Question:What did Jesse Jackson organize ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What is the birthstone of October ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0

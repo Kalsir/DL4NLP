@@ -14,11 +14,27 @@ import tqdm
 BATCH_SIZE = 8
 MAX_LEN = 128
 PRETRAINED_MODEL_NAME = 'bert-base-uncased'
-EPOCHS = 2
+EPOCHS = 5
 FINE = False
 MODEL = 'BERT' #Bert or LSTM
-UNCERTAINTY_PASSES = 100
-TRAINING_FILE = "train_1000.csv"
+UNCERTAINTY_PASSES = 50
+TRAINING_FILE = "train_5500.csv"
+OUTPUTFILE = "bert_5500_results.txt"
+
+# Open file and write some info
+f = open(OUTPUTFILE, "w")
+f.write("Hyperparameters\n")
+f.write("Model: " + MODEL + "\n")
+f.write("Maximum sentence length: " + str(MAX_LEN) + "\n")
+f.write("Fine types: " + str(FINE) + "\n")
+f.write("Uncertainty passes: " + str(UNCERTAINTY_PASSES) + "\n")
+f.write("Epochs: " + str(EPOCHS) + "\n")
+f.write("Training file: " + TRAINING_FILE + "\n")
+f.write("Batch size: " + str(BATCH_SIZE) + "\n")
+if MODEL == 'BERT':
+	f.write("Dropout: 0.3 " + "\n")
+else:
+	f.write("Dropout: 0.2" + "\n\n")
 
 # Some utility classes/functions
 class QCDataset(Dataset):
@@ -149,6 +165,7 @@ def train_epoch(
 
 def eval_uncertainty(model, data_loader, loss_fn, device, n_examples, label_encoder):
 	model = model.train()
+	progress_bar = tqdm.tqdm(total=len(data_loader), desc='Test samples')
 	for d in data_loader:
 		input_ids = d["input_ids"].to(device)
 		attention_mask = d["attention_mask"].to(device)
@@ -167,10 +184,14 @@ def eval_uncertainty(model, data_loader, loss_fn, device, n_examples, label_enco
 		most_frequent = counts.argmax()
 		prediction = unique[most_frequent]
 		certainty = counts[most_frequent].item()/UNCERTAINTY_PASSES
-		print("Question:", d["questions"])
-		print("Predicted Type:", label_encoder.inverse_transform([prediction.cpu().item()]))
-		print("Actual Type:", label_encoder.inverse_transform([d["types"].item()]))
-		print("Certainty:", certainty)
+		predicted_type = label_encoder.inverse_transform([prediction.cpu().item()])[0]
+		actual_type = label_encoder.inverse_transform([d["types"].item()])[0]
+		if predicted_type != actual_type:
+			f.write("Question:" + d["questions"][0])
+			f.write("Predicted Type:" + label_encoder.inverse_transform([prediction.cpu().item()])[0] + "\n")
+			f.write("Actual Type:" + label_encoder.inverse_transform([d["types"].item()])[0] + "\n")
+			f.write("Certainty:" + str(certainty) + "\n")
+		progress_bar.update()
 
 def eval_model(model, data_loader, loss_fn, device, n_examples):
   model = model.eval()
@@ -260,6 +281,7 @@ for epoch in range(EPOCHS):
     len(train)
   )
   print(f'Train loss {train_loss} accuracy {train_acc}')
+  f.write(f'Train loss {train_loss} accuracy {train_acc}' +"\n\n")
 
 # Test model
 print('Testing model')
@@ -272,8 +294,11 @@ test_acc, test_loss = eval_model(
     len(test)
   )
 print(f'Test loss {test_loss} accuracy {test_acc}')
+f.write(f'Test loss {test_loss} accuracy {test_acc}' +"\n\n")
 
 # Evaluate uncertainty
+print('Evaluating uncertainty')
+print('-' * 10)
 eval_uncertainty(
     model,
     test_uncertainty_data_loader,
