@@ -260,7 +260,7 @@ else:
 model = model.to(device)
 
 # Setup optimizer/scheduler/loss function
-optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
+optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False, weight_decay = 0.001) # Added 0.0001 weight decay as suggested in A Theoretically Grounded Application of Dropout in Recurrent Neural Networks
 total_steps = len(train_data_loader) * EPOCHS
 scheduler = get_linear_schedule_with_warmup(
   optimizer,
