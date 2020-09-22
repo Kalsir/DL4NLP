@@ -9,17 +9,18 @@ from torch.utils.data import Dataset, DataLoader
 from transformers import BertTokenizer, BertModel, AdamW, get_linear_schedule_with_warmup
 from sklearn.preprocessing import LabelEncoder
 import tqdm
+from better_lstm import LSTM
 
 # Hyperparams
 BATCH_SIZE = 8
 MAX_LEN = 128
 PRETRAINED_MODEL_NAME = 'bert-base-uncased'
-EPOCHS = 5
+EPOCHS = 10
 FINE = False
-MODEL = 'BERT' #Bert or LSTM
-UNCERTAINTY_PASSES = 50
-TRAINING_FILE = "train_5500.csv"
-OUTPUTFILE = "bert_5500_results.txt"
+MODEL = 'LSTM' #Bert or LSTM
+UNCERTAINTY_PASSES = 10
+TRAINING_FILE = "train_1000.csv"
+OUTPUTFILE = "better_lstm_1000_results.txt"
 
 # Open file and write some info
 f = open(OUTPUTFILE, "w")
@@ -103,14 +104,17 @@ class BertClassifier(nn.Module):
 
 class LSTMClassifier(nn.Module):
     def __init__(self, vocab_size, n_classes, embedding_dim = 768, hidden_dim = 768, n_layers = 2, 
-                 bidirectional = True, dropout = 0.2):
+                 bidirectional = True, dropouti = 0.25, dropouto = 0.25, dropoutw = 0.25, unit_forget_bias=True):
         super(LSTMClassifier, self).__init__()          
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
-        self.lstm = nn.LSTM(embedding_dim, 
+        self.lstm = LSTM(embedding_dim, 
                            hidden_dim, 
                            num_layers=n_layers, 
                            bidirectional=bidirectional, 
-                           dropout=dropout,
+                           dropouti = dropouti,
+                           dropouto = dropouto,
+                           dropoutw = dropoutw,
+                           unit_forget_bias=unit_forget_bias,
                            batch_first=True)
         if bidirectional:
         	self.fc = nn.Linear(hidden_dim * 2, n_classes)
