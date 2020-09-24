@@ -1,0 +1,105 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 5
+Training file: train_1000.csv
+Batch size: 8
+Dropout: 0.5
+Train loss 0.956735231757164 accuracy 0.635
+
+Train loss 0.2380391809269786 accuracy 0.934
+
+Train loss 0.12070476483367383 accuracy 0.976
+
+Train loss 0.03905372106283903 accuracy 0.992
+
+Train loss 0.029209539664909242 accuracy 0.994
+
+Test loss 0.20366914590658058 accuracy 0.966
+
+Question:What is the oldest university in the US ?
+Predicted Type:LOC
+Actual Type:HUM
+Certainty:0.96
+Question:What is the major fault line near Kentucky ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:In the late 1700 's British convicts were used to populate which colony ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.76
+Question:What is the sales tax in Minnesota ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.5
+Question:What New York City structure is also known as the Twin Towers ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.84
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What does a barometer measure ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is TMJ ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What monastery was raided by Vikings in the late eighth century ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What does the abbreviation SOS mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What did Jesse Jackson organize ?
+Predicted Type:DESC
+Actual Type:HUM
+Certainty:1.0
+Question:What is the source of natural gas ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the money they use in Zambia ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.96
+HUM precision: 1.0 average certainty: 0.9952380952380953 # of times predicted: 63
+ # of times actual: 65 recall: 0.9692307692307692
+LOC precision: 0.9634146341463414 average certainty: 0.9865853658536586 # of times predicted: 82
+ # of times actual: 81 recall: 0.9753086419753086
+ENTY precision: 0.9770114942528736 average certainty: 0.9742528735632183 # of times predicted: 87
+ # of times actual: 94 recall: 0.9042553191489362
+ABBR precision: 1.0 average certainty: 1.0 # of times predicted: 6
+ # of times actual: 9 recall: 0.6666666666666666
+DESC precision: 0.9452054794520548 average certainty: 0.9946575342465753 # of times predicted: 146
+ # of times actual: 138 recall: 1.0
+NUM precision: 0.9741379310344828 average certainty: 0.99 # of times predicted: 116
+ # of times actual: 113 recall: 1.0
+Uncertainty difference: 0.03924
+Uncertainty difference for fail: 0.93875
+Uncertainty difference for success: 0.009504132231404961
+Average precision (every class equal): 0.9766282564809589
+Average recall (every class equal): 0.9192435661702801
+Average certainty (every class equal): 0.9901223114835913
+Average certainty: 0.9888400000000002
+Accuracy: 0.968

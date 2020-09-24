@@ -20,8 +20,8 @@ FINE = False
 MODEL = 'BERT' #Bert or LSTM
 UNCERTAINTY_PASSES = 50
 TRAINING_FILE = "train_1000.csv"
-OUTPUTFILE = "bert_1000_drop_0.3.txt"
-BERT_DROPOUT = 0.3
+OUTPUTFILE = "bert_1000_drop_0.7.txt"
+BERT_DROPOUT = 0.7
 LSTM_DROPOUT = 0.25
 TYPES = ["HUM", "LOC", "ENTY", "ABBR", "DESC", "NUM"]
 

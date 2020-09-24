@@ -1,0 +1,121 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 5
+Training file: train_1000.csv
+Batch size: 8
+Dropout: 0.1
+Train loss 0.8138104978501797 accuracy 0.741
+
+Train loss 0.19867766692116856 accuracy 0.9410000000000001
+
+Train loss 0.07018872438929975 accuracy 0.982
+
+Train loss 0.05116210758965462 accuracy 0.99
+
+Train loss 0.02882895529270172 accuracy 0.994
+
+Test loss 0.23727263949094488 accuracy 0.9580000000000001
+
+Question:The U.S. Department of Treasury first issued paper currency for the U.S. during which war ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.72
+Question:What is the longest major league baseball-winning streak ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.86
+Question:What is the major fault line near Kentucky ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What position did Willie Davis play in baseball ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:In the late 1700 's British convicts were used to populate which colony ?
+Predicted Type:NUM
+Actual Type:LOC
+Certainty:0.64
+Question:What is the sales tax in Minnesota ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.76
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:1.0
+Question:What is Valentine 's Day ?
+Predicted Type:NUM
+Actual Type:DESC
+Certainty:1.0
+Question:What is the longest suspension bridge in the U.S. ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.98
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What does a barometer measure ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.94
+Question:What is TMJ ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What monastery was raided by Vikings in the late eighth century ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.72
+Question:What does the abbreviation SOS mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:0.76
+Question:How cold should a refrigerator be ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.9
+Question:What did Jesse Jackson organize ?
+Predicted Type:DESC
+Actual Type:HUM
+Certainty:0.92
+Question:What is the source of natural gas ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.96
+Question:What is the money they use in Zambia ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:1.0
+HUM precision: 0.984375 average certainty: 0.995625 # of times predicted: 64
+ # of times actual: 65 recall: 0.9692307692307692
+LOC precision: 0.9753086419753086 average certainty: 0.9958024691358024 # of times predicted: 81
+ # of times actual: 81 recall: 0.9753086419753086
+ENTY precision: 0.9764705882352941 average certainty: 0.9743529411764705 # of times predicted: 85
+ # of times actual: 94 recall: 0.8829787234042553
+ABBR precision: 1.0 average certainty: 1.0 # of times predicted: 6
+ # of times actual: 9 recall: 0.6666666666666666
+DESC precision: 0.9319727891156463 average certainty: 0.991972789115646 # of times predicted: 147
+ # of times actual: 138 recall: 0.9927536231884058
+NUM precision: 0.9572649572649573 average certainty: 0.9919658119658119 # of times predicted: 117
+ # of times actual: 113 recall: 0.9911504424778761
+Uncertainty difference: 0.040559999999999985
+Uncertainty difference for fail: 0.884
+Uncertainty difference for success: 0.005416666666666669
+Average precision (every class equal): 0.9708986627652011
+Average recall (every class equal): 0.9130148111572135
+Average certainty (every class equal): 0.9916198352322884
+Average certainty: 0.9901599999999999
+Accuracy: 0.96

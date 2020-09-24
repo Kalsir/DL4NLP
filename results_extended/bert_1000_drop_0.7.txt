@@ -1,0 +1,129 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 5
+Training file: train_1000.csv
+Batch size: 8
+Dropout: 0.7
+Train loss 1.4013045344352721 accuracy 0.41400000000000003
+
+Train loss 0.3973924298733473 accuracy 0.877
+
+Train loss 0.10986263608559967 accuracy 0.971
+
+Train loss 0.04198020108602941 accuracy 0.992
+
+Train loss 0.028520056524313987 accuracy 0.995
+
+Test loss 0.22314648511486926 accuracy 0.9540000000000001
+
+Question:What is the speed hummingbirds fly ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.92
+Question:The U.S. Department of Treasury first issued paper currency for the U.S. during which war ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.84
+Question:What is the oldest university in the US ?
+Predicted Type:LOC
+Actual Type:HUM
+Certainty:0.72
+Question:What is the longest major league baseball-winning streak ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the major fault line near Kentucky ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.98
+Question:What position did Willie Davis play in baseball ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.52
+Question:In the late 1700 's British convicts were used to populate which colony ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.8
+Question:What is the sales tax in Minnesota ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.78
+Question:What are the two houses of the Legislative branch ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.66
+Question:What is the longest suspension bridge in the U.S. ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What does a barometer measure ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is TMJ ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What monastery was raided by Vikings in the late eighth century ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.94
+Question:What does the abbreviation SOS mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What did Jesse Jackson organize ?
+Predicted Type:DESC
+Actual Type:HUM
+Certainty:1.0
+Question:What chain store is headquartered in Bentonville , Arkansas ?
+Predicted Type:LOC
+Actual Type:HUM
+Certainty:0.6
+Question:What is the source of natural gas ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.88
+Question:What is the money they use in Zambia ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.86
+HUM precision: 0.9682539682539683 average certainty: 0.9917460317460317 # of times predicted: 63
+ # of times actual: 65 recall: 0.9384615384615385
+LOC precision: 0.9518072289156626 average certainty: 0.979036144578313 # of times predicted: 83
+ # of times actual: 81 recall: 0.9753086419753086
+ENTY precision: 0.9647058823529412 average certainty: 0.9738823529411766 # of times predicted: 85
+ # of times actual: 94 recall: 0.8723404255319149
+ABBR precision: 1.0 average certainty: 0.9933333333333333 # of times predicted: 6
+ # of times actual: 9 recall: 0.6666666666666666
+DESC precision: 0.9261744966442953 average certainty: 0.9961073825503357 # of times predicted: 149
+ # of times actual: 138 recall: 1.0
+NUM precision: 0.9824561403508771 average certainty: 0.9914035087719298 # of times predicted: 114
+ # of times actual: 113 recall: 0.9911504424778761
+Uncertainty difference: 0.0444
+Uncertainty difference for fail: 0.8663636363636363
+Uncertainty difference for success: 0.006569037656903767
+Average precision (every class equal): 0.9655662860862909
+Average recall (every class equal): 0.9073212858522174
+Average certainty (every class equal): 0.9875847923201867
+Average certainty: 0.9878399999999999
+Accuracy: 0.956
