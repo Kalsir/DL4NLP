@@ -1,0 +1,117 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 5
+Training file: train_1000.csv
+Batch size: 8
+Dropout: 0.3
+Train loss 0.8239151185452938 accuracy 0.722
+
+Train loss 0.20497148033604026 accuracy 0.9460000000000001
+
+Train loss 0.0865644544661045 accuracy 0.979
+
+Train loss 0.03637459562625736 accuracy 0.992
+
+Train loss 0.018460188335739078 accuracy 0.995
+
+Test loss 0.23062615944553047 accuracy 0.9580000000000001
+
+Question:What is the longest major league baseball-winning streak ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.98
+Question:What is the major fault line near Kentucky ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.98
+Question:What is the sales tax in Minnesota ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.7
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:1.0
+Question:What is Valentine 's Day ?
+Predicted Type:NUM
+Actual Type:DESC
+Certainty:0.84
+Question:What is the longest suspension bridge in the U.S. ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is a parasite ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.94
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.98
+Question:What does a barometer measure ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.98
+Question:What is TMJ ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What is the street address of the White House ?
+Predicted Type:NUM
+Actual Type:LOC
+Certainty:0.86
+Question:What is the location of Lake Champlain ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.7
+Question:What is a carcinogen ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.92
+Question:Developing nations comprise what percentage of the world 's population ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:1.0
+Question:What monastery was raided by Vikings in the late eighth century ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What was FDR 's dog 's name ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.5
+Question:What did Jesse Jackson organize ?
+Predicted Type:DESC
+Actual Type:HUM
+Certainty:0.6
+HUM precision: 0.9846153846153847 average certainty: 0.9800000000000001 # of times predicted: 65
+ # of times actual: 65 recall: 0.9846153846153847
+LOC precision: 0.9629629629629629 average certainty: 0.9861728395061727 # of times predicted: 81
+ # of times actual: 81 recall: 0.9629629629629629
+ENTY precision: 0.9659090909090909 average certainty: 0.9863636363636364 # of times predicted: 88
+ # of times actual: 94 recall: 0.9042553191489362
+ABBR precision: 1.0 average certainty: 1.0 # of times predicted: 7
+ # of times actual: 9 recall: 0.7777777777777778
+DESC precision: 0.9440559440559441 average certainty: 0.9846153846153847 # of times predicted: 143
+ # of times actual: 138 recall: 0.9782608695652174
+NUM precision: 0.9655172413793104 average certainty: 0.9887931034482759 # of times predicted: 116
+ # of times actual: 113 recall: 0.9911504424778761
+Uncertainty difference: 0.04415999999999999
+Uncertainty difference for fail: 0.8936842105263159
+Uncertainty difference for success: 0.010602910602910605
+Average precision (every class equal): 0.9705101039871155
+Average recall (every class equal): 0.9331704594246925
+Average certainty (every class equal): 0.9876574939889117
+Average certainty: 0.98576
+Accuracy: 0.962

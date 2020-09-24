@@ -15,12 +15,15 @@ from better_lstm import LSTM
 BATCH_SIZE = 8
 MAX_LEN = 128
 PRETRAINED_MODEL_NAME = 'bert-base-uncased'
-EPOCHS = 10
+EPOCHS = 5
 FINE = False
-MODEL = 'LSTM' #Bert or LSTM
+MODEL = 'BERT' #Bert or LSTM
 UNCERTAINTY_PASSES = 50
-TRAINING_FILE = "train_5500.csv"
-OUTPUTFILE = "better_lstm_5500_results.txt"
+TRAINING_FILE = "train_1000.csv"
+OUTPUTFILE = "bert_1000_drop_0.3.txt"
+BERT_DROPOUT = 0.3
+LSTM_DROPOUT = 0.25
+TYPES = ["HUM", "LOC", "ENTY", "ABBR", "DESC", "NUM"]
 
 # Open file and write some info
 f = open(OUTPUTFILE, "w")
@@ -33,11 +36,11 @@ f.write("Epochs: " + str(EPOCHS) + "\n")
 f.write("Training file: " + TRAINING_FILE + "\n")
 f.write("Batch size: " + str(BATCH_SIZE) + "\n")
 if MODEL == 'BERT':
-	f.write("Dropout: 0.3 " + "\n")
+	f.write("Dropout: " + str(BERT_DROPOUT) + "\n")
 else:
-	f.write("Dropoutw: 0.25" + "\n\n")
-	f.write("Dropouti: 0.25" + "\n\n")
-	f.write("Dropouto: 0.25" + "\n\n")
+	f.write("Dropoutw: " + str(LSTM_DROPOUT) + "\n\n")
+	f.write("Dropouti: " + str(LSTM_DROPOUT) + "\n\n")
+	f.write("Dropouto: " + str(LSTM_DROPOUT) + "\n\n")
 
 # Some utility classes/functions
 class QCDataset(Dataset):
@@ -93,7 +96,7 @@ class BertClassifier(nn.Module):
   def __init__(self, n_classes):
     super(BertClassifier, self).__init__()
     self.bert = BertModel.from_pretrained(PRETRAINED_MODEL_NAME)
-    self.drop = nn.Dropout(p=0.3)
+    self.drop = nn.Dropout(p=BERT_DROPOUT)
     self.fc = nn.Linear(self.bert.config.hidden_size, n_classes)
 
   def forward(self, input_ids, attention_mask):
@@ -106,7 +109,7 @@ class BertClassifier(nn.Module):
 
 class LSTMClassifier(nn.Module):
     def __init__(self, vocab_size, n_classes, embedding_dim = 768, hidden_dim = 768, n_layers = 2, 
-                 bidirectional = True, dropouti = 0.25, dropouto = 0.25, dropoutw = 0.25, unit_forget_bias=True):
+                 bidirectional = True, dropouti = LSTM_DROPOUT, dropouto = LSTM_DROPOUT, dropoutw = LSTM_DROPOUT, unit_forget_bias=True):
         super(LSTMClassifier, self).__init__()          
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
         self.lstm = LSTM(embedding_dim, 
@@ -172,6 +175,18 @@ def train_epoch(
 def eval_uncertainty(model, data_loader, loss_fn, device, n_examples, label_encoder):
 	model = model.train()
 	progress_bar = tqdm.tqdm(total=len(data_loader), desc='Test samples')
+	uncertainty_difference = 0
+	uncertainty_difference_success = 0
+	uncertainty_difference_fail = 0
+	counter = 0
+	fail_counter = 0
+	precisions = [0, 0, 0, 0, 0, 0]
+	prediction_counters = [0, 0, 0, 0, 0, 0]
+	actual_counters = [0, 0, 0, 0, 0, 0]
+	true_positive_counters = [0, 0, 0, 0, 0, 0]
+	certainties = [0, 0, 0, 0, 0, 0]
+	certainties_ = [0, 0, 0, 0, 0, 0]
+	recalls = [0, 0, 0, 0, 0, 0]
 	for d in data_loader:
 		input_ids = d["input_ids"].to(device)
 		attention_mask = d["attention_mask"].to(device)
@@ -197,7 +212,43 @@ def eval_uncertainty(model, data_loader, loss_fn, device, n_examples, label_enco
 			f.write("Predicted Type:" + label_encoder.inverse_transform([prediction.cpu().item()])[0] + "\n")
 			f.write("Actual Type:" + label_encoder.inverse_transform([d["types"].item()])[0] + "\n")
 			f.write("Certainty:" + str(certainty) + "\n")
+			uncertainty_difference +=  certainty
+			uncertainty_difference_fail +=  certainty
+			fail_counter += 1
+		else:
+			uncertainty_difference += 1-certainty
+			uncertainty_difference_success += 1-certainty
+		counter += 1
+		for i, t in enumerate(TYPES):
+			if predicted_type == t:
+				prediction_counters[i] += 1
+				if predicted_type == actual_type:
+					true_positive_counters[i] += 1
+				certainties[i] += certainty
+			if actual_type == t:
+				actual_counters[i] += 1
 		progress_bar.update()
+	for i in range(6):
+		if prediction_counters[i] == 0:
+			precisions[i] = -1
+			certainties_[i] = -1
+		else:
+			precisions[i] = (true_positive_counters[i]/prediction_counters[i])
+			certainties_[i] = certainties[i]/prediction_counters[i]
+		recalls[i] = true_positive_counters[i]/actual_counters[i]
+		f.write(TYPES[i] + " precision: " + str(precisions[i]) + " average certainty: " + str(certainties_[i]) +  " # of times predicted: " + str(prediction_counters[i]) + "\n"
+			+  " # of times actual: " + str(actual_counters[i]) + " recall: " + str(recalls[i]) + "\n")
+	uncertainty_difference = uncertainty_difference/counter
+	uncertainty_difference_fail = uncertainty_difference_fail/fail_counter
+	uncertainty_difference_success = uncertainty_difference_success/(counter - fail_counter)
+	f.write("Uncertainty difference: " + str(uncertainty_difference) + "\n")
+	f.write("Uncertainty difference for fail: " + str(uncertainty_difference_fail) + "\n")
+	f.write("Uncertainty difference for success: " + str(uncertainty_difference_success) + "\n")
+	f.write("Average precision (every class equal): " + str(sum(precisions)/6) + "\n")
+	f.write("Average recall (every class equal): " + str(sum(recalls)/6) + "\n")
+	f.write("Average certainty (every class equal): " + str(sum(certainties_)/6) + "\n")
+	f.write("Average certainty: " + str(sum(certainties)/500) + "\n")
+	f.write("Accuracy: " + str(sum(true_positive_counters)/sum(prediction_counters)) + "\n")
 
 def eval_model(model, data_loader, loss_fn, device, n_examples):
   model = model.eval()
