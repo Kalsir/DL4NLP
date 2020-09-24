@@ -18,9 +18,9 @@ PRETRAINED_MODEL_NAME = 'bert-base-uncased'
 EPOCHS = 10
 FINE = False
 MODEL = 'LSTM' #Bert or LSTM
-UNCERTAINTY_PASSES = 10
-TRAINING_FILE = "train_1000.csv"
-OUTPUTFILE = "better_lstm_1000_results.txt"
+UNCERTAINTY_PASSES = 50
+TRAINING_FILE = "train_5500.csv"
+OUTPUTFILE = "better_lstm_5500_results.txt"
 
 # Open file and write some info
 f = open(OUTPUTFILE, "w")
@@ -35,7 +35,9 @@ f.write("Batch size: " + str(BATCH_SIZE) + "\n")
 if MODEL == 'BERT':
 	f.write("Dropout: 0.3 " + "\n")
 else:
-	f.write("Dropout: 0.2" + "\n\n")
+	f.write("Dropoutw: 0.25" + "\n\n")
+	f.write("Dropouti: 0.25" + "\n\n")
+	f.write("Dropouto: 0.25" + "\n\n")
 
 # Some utility classes/functions
 class QCDataset(Dataset):
