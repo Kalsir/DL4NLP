@@ -9,18 +9,19 @@ from torch.utils.data import Dataset, DataLoader
 from transformers import BertTokenizer, BertModel, AdamW, get_linear_schedule_with_warmup
 from sklearn.preprocessing import LabelEncoder
 import tqdm
-from better_lstm import LSTM
+from better_lstm import LSTM   
+from torchtext import data    
 
 # Hyperparams
 BATCH_SIZE = 8
-MAX_LEN = 128
+MAX_LEN = 40
 PRETRAINED_MODEL_NAME = 'bert-base-uncased'
 EPOCHS = 5
 FINE = False
-MODEL = 'BERT' #Bert or LSTM
+MODEL = 'LSTM' #BERT or LSTM
 UNCERTAINTY_PASSES = 50
 TRAINING_FILE = "train_1000.csv"
-OUTPUTFILE = "bert_1000_drop_0.7.txt"
+OUTPUTFILE = "test.txt"
 BERT_DROPOUT = 0.7
 LSTM_DROPOUT = 0.25
 TYPES = ["HUM", "LOC", "ENTY", "ABBR", "DESC", "NUM"]
@@ -108,10 +109,11 @@ class BertClassifier(nn.Module):
     return self.fc(output)
 
 class LSTMClassifier(nn.Module):
-    def __init__(self, vocab_size, n_classes, embedding_dim = 768, hidden_dim = 768, n_layers = 2, 
+    def __init__(self, vocab_size, n_classes, embedding_dim = 300, hidden_dim = 768, n_layers = 2, 
                  bidirectional = True, dropouti = LSTM_DROPOUT, dropouto = LSTM_DROPOUT, dropoutw = LSTM_DROPOUT, unit_forget_bias=True):
         super(LSTMClassifier, self).__init__()          
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
+        #self.embedding.requires_grad = False
         self.lstm = LSTM(embedding_dim, 
                            hidden_dim, 
                            num_layers=n_layers, 
@@ -152,12 +154,13 @@ def train_epoch(
 
   progress_bar = tqdm.tqdm(total=len(data_loader), desc='Batches')
   for d in data_loader:
-    input_ids = d["input_ids"].to(device)
-    targets = d["types"].to(device)
     if MODEL == 'LSTM':
-    	text_lengths = d["text_lengths"].to(device)
-    	outputs = model(input_ids, text_lengths)
+    	text, text_lengths = d.text   
+    	outputs = model(text, text_lengths)
+    	targets = d.label
     else:
+    	input_ids = d["input_ids"].to(device)
+    	targets = d["types"].to(device)
     	attention_mask = d["attention_mask"].to(device)
     	outputs = model(input_ids, attention_mask)
     _, preds = torch.max(outputs, dim=1)
@@ -188,29 +191,34 @@ def eval_uncertainty(model, data_loader, loss_fn, device, n_examples, label_enco
 	certainties_ = [0, 0, 0, 0, 0, 0]
 	recalls = [0, 0, 0, 0, 0, 0]
 	for d in data_loader:
-		input_ids = d["input_ids"].to(device)
-		attention_mask = d["attention_mask"].to(device)
-		targets = d["types"].to(device)
-		if MODEL == 'LSTM':
-			secondary =d["text_lengths"].to(device)
-		else:
-			secondary = d["attention_mask"].to(device)
-			outputs = model(input_ids, attention_mask)
 		pred_list = []
-		for i in range(UNCERTAINTY_PASSES):
-			outputs = model(input_ids, secondary)
-			_, pred = torch.max(outputs, dim=1)
-			pred_list.append(pred)
+		if MODEL == 'LSTM':
+			text, text_lengths = d.text   
+			outputs = model(text, text_lengths)
+			targets = d.label
+			for i in range(UNCERTAINTY_PASSES):
+				outputs = model(text, text_lengths)
+				_, pred = torch.max(outputs, dim=1)
+				pred_list.append(pred)
+			actual_type = label_encoder.inverse_transform([d.label[0].cpu().item()])[0]
+		else:
+			input_ids = d["input_ids"].to(device)
+			targets = d["types"].to(device)
+			attention_mask = d["attention_mask"].to(device)
+			for i in range(UNCERTAINTY_PASSES):
+				outputs = model(input_ids, attention_mask)
+				_, pred = torch.max(outputs, dim=1)
+				pred_list.append(pred)
+			actual_type = label_encoder.inverse_transform([d["types"].item()])[0]
 		unique, counts = torch.unique(torch.stack(pred_list), return_counts = True)
 		most_frequent = counts.argmax()
 		prediction = unique[most_frequent]
 		certainty = counts[most_frequent].item()/UNCERTAINTY_PASSES
 		predicted_type = label_encoder.inverse_transform([prediction.cpu().item()])[0]
-		actual_type = label_encoder.inverse_transform([d["types"].item()])[0]
 		if predicted_type != actual_type:
-			f.write("Question:" + d["questions"][0])
+			#f.write("Question:" + d["questions"][0])
 			f.write("Predicted Type:" + label_encoder.inverse_transform([prediction.cpu().item()])[0] + "\n")
-			f.write("Actual Type:" + label_encoder.inverse_transform([d["types"].item()])[0] + "\n")
+			f.write("Actual Type:" + str(actual_type) + "\n")
 			f.write("Certainty:" + str(certainty) + "\n")
 			uncertainty_difference +=  certainty
 			uncertainty_difference_fail +=  certainty
@@ -257,23 +265,26 @@ def eval_model(model, data_loader, loss_fn, device, n_examples):
   with torch.no_grad():
     progress_bar = tqdm.tqdm(total=len(data_loader), desc='Batches')
     for d in data_loader:
-      input_ids = d["input_ids"].to(device)
-      attention_mask = d["attention_mask"].to(device)
-      targets = d["types"].to(device)
-      if MODEL == 'LSTM':
-      	text_lengths =d["text_lengths"].to(device)
-      	outputs = model(input_ids, text_lengths)
-      else:
-      	attention_mask = d["attention_mask"].to(device)
-      	outputs = model(input_ids, attention_mask)
-      _, preds = torch.max(outputs, dim=1)
-      loss = loss_fn(outputs, targets)
-      correct_predictions += torch.sum(preds == targets)
-      losses.append(loss.item())
-      progress_bar.update()
+    	if MODEL == 'LSTM':
+    		text, text_lengths = d.text   
+    		outputs = model(text, text_lengths)
+    		targets = d.label
+    	else:
+    		input_ids = d["input_ids"].to(device)
+    		targets = d["types"].to(device)
+    		attention_mask = d["attention_mask"].to(device)
+    		outputs = model(input_ids, attention_mask)
+    	_, preds = torch.max(outputs, dim=1)
+    	loss = loss_fn(outputs, targets)
+    	correct_predictions += torch.sum(preds == targets)
+    	losses.append(loss.item())
+    	progress_bar.update()
   return correct_predictions.double() / n_examples, np.mean(losses)
 
-# Load train and test data
+# Setup GPU
+print("GPU available:", torch.cuda.is_available())
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
 train = pd.read_csv(TRAINING_FILE)
 test = pd.read_csv("test_500.csv")
 
@@ -293,21 +304,32 @@ if FINE:
 else:
 	num_classes = num_coarse
 
-# Get tokenizer for preprocessing
-tokenizer = BertTokenizer.from_pretrained(PRETRAINED_MODEL_NAME)
-
 # Create dataloaders
-train_data_loader = create_data_loader(train, tokenizer, MAX_LEN, BATCH_SIZE, FINE)
-test_data_loader = create_data_loader(test, tokenizer, MAX_LEN, BATCH_SIZE, FINE)
-test_uncertainty_data_loader = create_data_loader(test, tokenizer, MAX_LEN, 1, FINE)
+if MODEL == 'BERT':
+	# Get tokenizer for preprocessing
+	tokenizer = BertTokenizer.from_pretrained(PRETRAINED_MODEL_NAME)
 
-# Setup GPU
-print("GPU available:", torch.cuda.is_available())
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+	train_data_loader = create_data_loader(train, tokenizer, MAX_LEN, BATCH_SIZE, FINE)
+	test_data_loader = create_data_loader(test, tokenizer, MAX_LEN, BATCH_SIZE, FINE)
+	test_uncertainty_data_loader = create_data_loader(test, tokenizer, MAX_LEN, 1, FINE)
+else:	
+	TEXT = data.Field(tokenize='spacy',batch_first=True,include_lengths=True)
+	LABEL = data.LabelField(dtype = torch.long ,batch_first=True)
+	fields = [(None, None), ('text',TEXT), (None, None), ('label', LABEL), (None, None)]
+	training_data=data.TabularDataset(path = TRAINING_FILE, format = 'csv',fields = fields, skip_header = True)
+	test_data=data.TabularDataset(path = 'test_500.csv', format = 'csv',fields = fields, skip_header = True)
+	TEXT.build_vocab(training_data, min_freq=1,vectors = "glove.6B.300d")  
+	LABEL.build_vocab(training_data)
+	train_data_loader, test_data_loader = data.BucketIterator.splits((training_data, test_data), batch_size = BATCH_SIZE, sort_key = lambda x: len(x.text), sort_within_batch=True, device = device)
+	test_uncertainty_data_loader = data.BucketIterator(test_data, batch_size = 1, sort_key = lambda x: len(x.text), sort_within_batch=True, device = device)
 
 # Create model and move it to GPU
 if MODEL == 'LSTM':
-	model = LSTMClassifier(tokenizer.vocab_size, num_classes)
+	model = LSTMClassifier(len(TEXT.vocab), num_classes)
+	print("Vocab size:", len(TEXT.vocab))
+	# Copy pretained embeddings
+	pretrained_embeddings = TEXT.vocab.vectors
+	model.embedding.weight.data.copy_(pretrained_embeddings)
 else:
 	model = BertClassifier(num_classes)
 model = model.to(device)
