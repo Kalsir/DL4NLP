@@ -21,8 +21,9 @@ MODEL = 'BERT' #Bert or LSTM
 UNCERTAINTY_PASSES = 50
 TRAINING_FILE = "train_1000.csv"
 OUTPUTFILE = "test.txt"
-BERT_DROPOUT = 0.5
-LSTM_DROPOUT = 0.35
+BERT_DROPOUT = 0.3
+BERT_DROPOUT_INTERNAL = 0.1
+LSTM_DROPOUT = 0.25
 TYPES = ["HUM", "LOC", "ENTY", "ABBR", "DESC", "NUM"]
 
 # Open file and write some info
@@ -96,7 +97,7 @@ class BertClassifier(nn.Module):
   def __init__(self, n_classes):
     super(BertClassifier, self).__init__()
     config = BertConfig.from_pretrained(PRETRAINED_MODEL_NAME) 
-    config.hidden_dropout_prob = BERT_DROPOUT
+    config.hidden_dropout_prob = BERT_DROPOUT_INTERNAL
     self.bert = BertModel.from_pretrained(PRETRAINED_MODEL_NAME, config = config)
     self.drop = nn.Dropout(p=BERT_DROPOUT)
     self.fc = nn.Linear(self.bert.config.hidden_size, n_classes)

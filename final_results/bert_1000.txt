@@ -1,0 +1,113 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 5
+Training file: train_1000.csv
+Batch size: 8
+Dropout: 0.1
+Train loss 0.9083427286446094 accuracy 0.667
+
+Train loss 0.2407539841197431 accuracy 0.936
+
+Train loss 0.08359302517957985 accuracy 0.98
+
+Train loss 0.046799969495274124 accuracy 0.991
+
+Train loss 0.028160642054863273 accuracy 0.993
+
+Test loss 0.19600109580815547 accuracy 0.962
+
+Question:What imaginary line is halfway between the North and South Poles ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.64
+Question:What is the longest major league baseball-winning streak ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.92
+Question:What is the major fault line near Kentucky ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:What position did Willie Davis play in baseball ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.94
+Question:What is the sales tax in Minnesota ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.84
+Question:What New York City structure is also known as the Twin Towers ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.94
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.72
+Question:What is the longest suspension bridge in the U.S. ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:1.0
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the esophagus used for ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.94
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What does a barometer measure ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.98
+Question:What is TMJ ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What monastery was raided by Vikings in the late eighth century ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.9
+Question:What does the abbreviation SOS mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What did Jesse Jackson organize ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.72
+Question:What is the money they use in Zambia ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.92
+HUM precision: 1.0 average certainty: 0.9923809523809524 # of times predicted: 63
+ # of times actual: 65 recall: 0.9692307692307692
+LOC precision: 0.975 average certainty: 0.9932500000000001 # of times predicted: 80
+ # of times actual: 81 recall: 0.9629629629629629
+ENTY precision: 0.9340659340659341 average certainty: 0.9826373626373625 # of times predicted: 91
+ # of times actual: 94 recall: 0.9042553191489362
+ABBR precision: 1.0 average certainty: 1.0 # of times predicted: 6
+ # of times actual: 9 recall: 0.6666666666666666
+DESC precision: 0.9513888888888888 average certainty: 0.9947222222222218 # of times predicted: 144
+ # of times actual: 138 recall: 0.9927536231884058
+NUM precision: 0.9741379310344828 average certainty: 0.9874137931034485 # of times predicted: 116
+ # of times actual: 113 recall: 1.0
+Uncertainty difference: 0.03947999999999999
+Uncertainty difference for fail: 0.9144444444444445
+Uncertainty difference for success: 0.006804979253112035
+Average precision (every class equal): 0.9724321256648844
+Average recall (every class equal): 0.9159782235329569
+Average certainty (every class equal): 0.9917340550573308
+Average certainty: 0.99036
+Accuracy: 0.964

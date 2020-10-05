@@ -1,0 +1,97 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 5
+Training file: train_5500.csv
+Batch size: 8
+Dropout: 0.1
+Train loss 0.3958758510498308 accuracy 0.884446074834923
+
+Train loss 0.10782073043405264 accuracy 0.9759721203228173
+
+Train loss 0.04081829446629086 accuracy 0.9913793103448276
+
+Train loss 0.027456656588820804 accuracy 0.9948642699926633
+
+Train loss 0.008864602626018332 accuracy 0.998349229640499
+
+Test loss 0.15945676479549592 accuracy 0.976
+
+Question:What is the longest major league baseball-winning streak ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.96
+Question:What is the major fault line near Kentucky ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.92
+Question:What is the birthstone for June ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.8
+Question:What is the sales tax in Minnesota ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.9
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:1.0
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.98
+Question:What are the twin cities ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:1.0
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What does ciao mean ?
+Predicted Type:ABBR
+Actual Type:DESC
+Certainty:0.52
+Question:What is the elevation of St. Louis , MO ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:0.54
+Question:What monastery was raided by Vikings in the late eighth century ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:1.0
+Question:How cold should a refrigerator be ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.7
+Question:What did Jesse Jackson organize ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:1.0
+Question:What is the birthstone of October ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.54
+HUM precision: 1.0 average certainty: 0.9990625 # of times predicted: 64
+ # of times actual: 65 recall: 0.9846153846153847
+LOC precision: 0.963855421686747 average certainty: 0.990120481927711 # of times predicted: 83
+ # of times actual: 81 recall: 0.9876543209876543
+ENTY precision: 0.9883720930232558 average certainty: 0.9974418604651163 # of times predicted: 86
+ # of times actual: 94 recall: 0.9042553191489362
+ABBR precision: 0.9 average certainty: 0.944 # of times predicted: 10
+ # of times actual: 9 recall: 1.0
+DESC precision: 0.9513888888888888 average certainty: 0.9895833333333331 # of times predicted: 144
+ # of times actual: 138 recall: 0.9927536231884058
+NUM precision: 0.9823008849557522 average certainty: 0.9975221238938053 # of times predicted: 113
+ # of times actual: 113 recall: 0.9823008849557522
+Uncertainty difference: 0.026319999999999986
+Uncertainty difference for fail: 0.8471428571428571
+Uncertainty difference for success: 0.0026748971193415643
+Average precision (every class equal): 0.9643195480924405
+Average recall (every class equal): 0.9752632554826889
+Average certainty (every class equal): 0.9862883832699944
+Average certainty: 0.9931199999999999
+Accuracy: 0.972
