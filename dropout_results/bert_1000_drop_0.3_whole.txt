@@ -1,0 +1,133 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 5
+Training file: train_1000.csv
+Batch size: 8
+Dropout: 0.3
+Train loss 1.059112765789032 accuracy 0.607
+
+Train loss 0.33640396608412265 accuracy 0.898
+
+Train loss 0.16329596485197545 accuracy 0.9550000000000001
+
+Train loss 0.08741114834323525 accuracy 0.976
+
+Train loss 0.06980513940006494 accuracy 0.981
+
+Test loss 0.28890264953767497 accuracy 0.9460000000000001
+
+Question:The U.S. Department of Treasury first issued paper currency for the U.S. during which war ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.58
+Question:What is the oldest university in the US ?
+Predicted Type:LOC
+Actual Type:HUM
+Certainty:0.94
+Question:What is the longest major league baseball-winning streak ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.66
+Question:What is the major fault line near Kentucky ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.96
+Question:What position did Willie Davis play in baseball ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.54
+Question:What is natural gas composed of ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.62
+Question:What is the sales tax in Minnesota ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.9
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.96
+Question:What are the two houses of the Legislative branch ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.4
+Question:What is Valentine 's Day ?
+Predicted Type:NUM
+Actual Type:DESC
+Certainty:0.54
+Question:What is the longest suspension bridge in the U.S. ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.96
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.98
+Question:What is the esophagus used for ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.72
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:1.0
+Question:What does a barometer measure ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.94
+Question:What is TMJ ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:Developing nations comprise what percentage of the world 's population ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:0.8
+Question:What monastery was raided by Vikings in the late eighth century ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.98
+Question:What does the abbreviation SOS mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:0.94
+Question:What did Jesse Jackson organize ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.84
+Question:What is the source of natural gas ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.56
+Question:What is the money they use in Zambia ?
+Predicted Type:NUM
+Actual Type:ENTY
+Certainty:0.6
+HUM precision: 0.9841269841269841 average certainty: 0.9879365079365079 # of times predicted: 63
+ # of times actual: 65 recall: 0.9538461538461539
+LOC precision: 0.9411764705882353 average certainty: 0.9705882352941179 # of times predicted: 85
+ # of times actual: 81 recall: 0.9876543209876543
+ENTY precision: 0.9529411764705882 average certainty: 0.9414117647058822 # of times predicted: 85
+ # of times actual: 94 recall: 0.8617021276595744
+ABBR precision: 1.0 average certainty: 1.0 # of times predicted: 6
+ # of times actual: 9 recall: 0.6666666666666666
+DESC precision: 0.9379310344827586 average certainty: 0.9856551724137932 # of times predicted: 145
+ # of times actual: 138 recall: 0.9855072463768116
+NUM precision: 0.9655172413793104 average certainty: 0.97051724137931 # of times predicted: 116
+ # of times actual: 113 recall: 0.9911504424778761
+Uncertainty difference: 0.05515999999999998
+Uncertainty difference for fail: 0.8008695652173914
+Uncertainty difference for success: 0.01920335429769391
+Average precision (every class equal): 0.9636154845079794
+Average recall (every class equal): 0.9077544930024563
+Average certainty (every class equal): 0.9760181536216018
+Average certainty: 0.9725199999999999
+Accuracy: 0.954

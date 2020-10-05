@@ -1,0 +1,576 @@
+Hyperparameters
+Model: LSTM
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 10
+Training file: train_5500.csv
+Batch size: 8
+Dropoutw: 0.7
+
+Dropouti: 0.7
+
+Dropouto: 0.7
+
+Train loss 1.3297171417044755 accuracy 0.4838591342626559
+
+Train loss 1.0254963218859914 accuracy 0.6162876008804109
+
+Train loss 0.9361982632024197 accuracy 0.6485693323550991
+
+Train loss 0.8871933796341993 accuracy 0.6617754952311079
+
+Train loss 0.8413771556313436 accuracy 0.6792002934702862
+
+Train loss 0.8350975224775565 accuracy 0.6786500366837858
+
+Train loss 0.8119667399827598 accuracy 0.6881878209831255
+
+Train loss 0.7896567952390378 accuracy 0.7013939838591343
+
+Train loss 0.7870641451088651 accuracy 0.6991929567131329
+
+Train loss 0.7756476396547297 accuracy 0.7079970652971387
+
+Test loss 0.8121230611134143 accuracy 0.706
+
+Question:What county is Modesto , California in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.46
+Question:How tall is the Sears Building ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.64
+Question:George Bush purchased a small interest in which baseball team ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.7
+Question:What is Australia 's national flower ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.42
+Question:What person 's head is on a dime ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.78
+Question:What is the average weight of a Yellow Labrador ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.5
+Question:What is the life expectancy for crickets ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.6
+Question:What metal has the highest melting point ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.5
+Question:What imaginary line is halfway between the North and South Poles ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.4
+Question:What hemisphere is the Philippines in ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.58
+Question:What is the name of the chocolate company in San Francisco ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.86
+Question:What is the capital of Yugoslavia ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.52
+Question:What is the speed hummingbirds fly ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.86
+Question:What do bats eat ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.9
+Question:What state did the Battle of Bighorn take place in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.46
+Question:What day and month did John Lennon die ?
+Predicted Type:HUM
+Actual Type:NUM
+Certainty:0.42
+Question:What strait separates North America from Asia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.8
+Question:What is the population of Seattle ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.78
+Question:What American composer wrote the music for `` West Side Story '' ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.7
+Question:What is the population of China ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.88
+Question:The U.S. Department of Treasury first issued paper currency for the U.S. during which war ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.78
+Question:What is the temperature of the sun 's surface ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.44
+Question:What is the oldest university in the US ?
+Predicted Type:LOC
+Actual Type:HUM
+Certainty:0.58
+Question:What is the longest major league baseball-winning streak ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.5
+Question:What county is Phoenix , AZ in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.38
+Question:The sun 's core , what is the temperature ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.32
+Question:What is the Ohio state bird ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.76
+Question:What is the name of Neil Armstrong 's wife ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.84
+Question:What is Hawaii 's state flower ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.68
+Question:What mineral helps prevent osteoporosis ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.52
+Question:What is the diameter of a golf ball ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:What is the earth 's diameter ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.8
+Question:How wide is the Milky Way galaxy ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.52
+Question:During which season do most thunderstorms occur ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.7
+Question:What is the gestation period for a cat ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.7
+Question:How far is a nautical mile ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.54
+Question:What is the major fault line near Kentucky ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.68
+Question:What position did Willie Davis play in baseball ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.88
+Question:What is a baby turkey called ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.54
+Question:What is the longest bone in the human body ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.62
+Question:What continent is Egypt on ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.68
+Question:What is the capital of Mongolia ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.8
+Question:In the late 1700 's British convicts were used to populate which colony ?
+Predicted Type:NUM
+Actual Type:LOC
+Certainty:0.4
+Question:What peninsula is Spain part of ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.74
+Question:What is acetaminophen ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.68
+Question:What U.S. state 's motto is `` Live free or Die '' ?
+Predicted Type:HUM
+Actual Type:LOC
+Certainty:0.48
+Question:What body of water are the Canary Islands in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.66
+Question:What is natural gas composed of ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.62
+Question:What French ruler was defeated at the battle of Waterloo ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.58
+Question:What is the birthstone for June ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.72
+Question:What is the sales tax in Minnesota ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.48
+Question:What is the distance in miles from the earth to the sun ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:0.44
+Question:What is the average life span for a chicken ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.46
+Question:What is the melting point of copper ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.82
+Question:What is the average body temperature ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.74
+Question:What province is Montreal in ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.56
+Question:What are the spots on dominoes called ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.48
+Question:What is the electrical output in Madrid , Spain ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.48
+Question:Which mountain range in North America stretches from Maine to Georgia ?
+Predicted Type:HUM
+Actual Type:LOC
+Certainty:0.56
+Question:What is plastic made of ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.82
+Question:What is the population of Nigeria ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.76
+Question:What is the name of the leader of Ireland ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.88
+Question:What is the location of the Sea of Tranquility ?
+Predicted Type:NUM
+Actual Type:LOC
+Certainty:0.36
+Question:What is the criterion for being legally blind ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.46
+Question:What are the twin cities ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.78
+Question:What is the statue of liberty made of ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.52
+Question:What planet is known as the `` red '' planet ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.52
+Question:What is the depth of the Nile river ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.42
+Question:Mexican pesos are worth what in U.S. dollars ?
+Predicted Type:LOC
+Actual Type:NUM
+Certainty:0.46
+Question:What is the capital of Ethiopia ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.7
+Question:What is the primary language in Iceland ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.42
+Question:What is the abbreviation for Texas ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:0.74
+Question:What are Quaaludes ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.76
+Question:What is foot and mouth disease ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.66
+Question:What is the life expectancy of a dollar bill ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.38
+Question:What color is indigo ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.78
+Question:How old do you have to be in order to rent a car in Italy ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.9
+Question:What does a barometer measure ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.56
+Question:What date did Neil Armstrong land on the moon ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.66
+Question:What is the capital of Persia ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.72
+Question:What is the brightest star ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.9
+Question:What is TMJ ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:0.86
+Question:What date was Dwight D. Eisenhower born ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.42
+Question:What does the technical term ISDN mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:0.82
+Question:What is the conversion rate between dollars and pounds ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.96
+Question:What is the melting point of gold ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.7
+Question:What is the street address of the White House ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.4
+Question:What is the percentage of water content in the human body ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.34
+Question:How much does water weigh ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.58
+Question:What is the murder rate in Windsor , Ontario ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.42
+Question:What is the population of Australia ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.6
+Question:Name a stimulant .
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.58
+Question:What is the location of Lake Champlain ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.66
+Question:What is the Illinois state flower ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.68
+Question:What is Maryland 's state bird ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.48
+Question:What is the speed of light ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.84
+Question:What is the width of a football field ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.44
+Question:What is the elevation of St. Louis , MO ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.54
+Question:What is the atomic weight of silver ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.68
+Question:What birthstone is turquoise ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.82
+Question:What is a baby lion called ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.58
+Question:What is the world 's population ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.58
+Question:What is the sales tax rate in New York ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:Developing nations comprise what percentage of the world 's population ?
+Predicted Type:HUM
+Actual Type:NUM
+Certainty:0.42
+Question:What is Shakespeare 's nickname ?
+Predicted Type:DESC
+Actual Type:HUM
+Certainty:0.74
+Question:What is the heaviest naturally occurring element ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.86
+Question:What is the capital of Zimbabwe ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.66
+Question:What is the state flower of Michigan ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.48
+Question:What are Canada 's two territories ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.46
+Question:What continent is Argentina on ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.88
+Question:What does the abbreviation SOS mean ?
+Predicted Type:DESC
+Actual Type:ABBR
+Certainty:1.0
+Question:What is the smallest bird in Britain ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.56
+Question:What is the rainiest place on Earth ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.68
+Question:What was FDR 's dog 's name ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.52
+Question:What is the active ingredient in baking soda ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.34
+Question:How cold should a refrigerator be ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.52
+Question:What is angiotensin ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:What did Jesse Jackson organize ?
+Predicted Type:DESC
+Actual Type:HUM
+Certainty:0.58
+Question:What is New York 's state bird ?
+Predicted Type:LOC
+Actual Type:ENTY
+Certainty:0.5
+Question:What is the National Park in Utah ?
+Predicted Type:DESC
+Actual Type:LOC
+Certainty:0.44
+Question:What is Susan B. Anthony 's birthday ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.46
+Question:What chain store is headquartered in Bentonville , Arkansas ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.92
+Question:What currency does Luxembourg use ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.52
+Question:What is the population of Venezuela ?
+Predicted Type:DESC
+Actual Type:NUM
+Certainty:0.84
+Question:What currency does Argentina use ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.74
+Question:What was the name of the first U.S. satellite sent into space ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.76
+Question:What river runs through Rowe , Italy ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.44
+Question:What is the source of natural gas ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.58
+Question:In what spacecraft did U.S. astronaut Alan Shepard make his historic 1961 flight ?
+Predicted Type:HUM
+Actual Type:ENTY
+Certainty:0.66
+Question:What is the birthstone of October ?
+Predicted Type:DESC
+Actual Type:ENTY
+Certainty:0.6
+HUM precision: 0.8412698412698413 average certainty: 0.9168253968253968 # of times predicted: 63
+ # of times actual: 65 recall: 0.8153846153846154
+LOC precision: 0.8387096774193549 average certainty: 0.8519354838709677 # of times predicted: 62
+ # of times actual: 81 recall: 0.6419753086419753
+ENTY precision: 0.6428571428571429 average certainty: 0.6961904761904761 # of times predicted: 84
+ # of times actual: 94 recall: 0.574468085106383
+ABBR precision: 1.0 average certainty: 0.544 # of times predicted: 5
+ # of times actual: 9 recall: 0.5555555555555556
+DESC precision: 0.6338028169014085 average certainty: 0.8007511737089203 # of times predicted: 213
+ # of times actual: 138 recall: 0.9782608695652174
+NUM precision: 0.9726027397260274 average certainty: 0.8868493150684931 # of times predicted: 73
+ # of times actual: 113 recall: 0.6283185840707964
+Uncertainty difference: 0.2491200000000001
+Uncertainty difference for fail: 0.6216923076923075
+Uncertainty difference for success: 0.11821621621621624
+Average precision (every class equal): 0.8215403696956293
+Average recall (every class equal): 0.6989938363874239
+Average certainty (every class equal): 0.7827586409440422
+Average certainty: 0.8141600000000001
+Accuracy: 0.74

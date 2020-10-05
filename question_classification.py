@@ -6,7 +6,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
-from transformers import BertTokenizer, BertModel, AdamW, get_linear_schedule_with_warmup
+from transformers import BertTokenizer, BertModel, AdamW, get_linear_schedule_with_warmup, BertConfig
 from sklearn.preprocessing import LabelEncoder
 import tqdm
 from better_lstm import LSTM
@@ -20,9 +20,9 @@ FINE = False
 MODEL = 'BERT' #Bert or LSTM
 UNCERTAINTY_PASSES = 50
 TRAINING_FILE = "train_1000.csv"
-OUTPUTFILE = "bert_1000_drop_0.7.txt"
-BERT_DROPOUT = 0.7
-LSTM_DROPOUT = 0.25
+OUTPUTFILE = "test.txt"
+BERT_DROPOUT = 0.5
+LSTM_DROPOUT = 0.35
 TYPES = ["HUM", "LOC", "ENTY", "ABBR", "DESC", "NUM"]
 
 # Open file and write some info
@@ -95,7 +95,9 @@ def create_data_loader(df, tokenizer, max_len, batch_size, fine = False):
 class BertClassifier(nn.Module):
   def __init__(self, n_classes):
     super(BertClassifier, self).__init__()
-    self.bert = BertModel.from_pretrained(PRETRAINED_MODEL_NAME)
+    config = BertConfig.from_pretrained(PRETRAINED_MODEL_NAME) 
+    config.hidden_dropout_prob = BERT_DROPOUT
+    self.bert = BertModel.from_pretrained(PRETRAINED_MODEL_NAME, config = config)
     self.drop = nn.Dropout(p=BERT_DROPOUT)
     self.fc = nn.Linear(self.bert.config.hidden_size, n_classes)
 
@@ -313,7 +315,7 @@ else:
 model = model.to(device)
 
 # Setup optimizer/scheduler/loss function
-optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False, weight_decay = 0.001) # Added 0.0001 weight decay as suggested in A Theoretically Grounded Application of Dropout in Recurrent Neural Networks
+optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False, weight_decay = 0.001) # Added 0.001 weight decay as suggested in A Theoretically Grounded Application of Dropout in Recurrent Neural Networks
 total_steps = len(train_data_loader) * EPOCHS
 scheduler = get_linear_schedule_with_warmup(
   optimizer,

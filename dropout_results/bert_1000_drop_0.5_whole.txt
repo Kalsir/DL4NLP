@@ -1,0 +1,1661 @@
+Hyperparameters
+Model: BERT
+Maximum sentence length: 128
+Fine types: False
+Uncertainty passes: 50
+Epochs: 5
+Training file: train_1000.csv
+Batch size: 8
+Dropout: 0.5
+Train loss 1.745835862159729 accuracy 0.225
+
+Train loss 1.6996221399307252 accuracy 0.219
+
+Train loss 1.686451813697815 accuracy 0.217
+
+Train loss 1.6856492385864257 accuracy 0.216
+
+Train loss 1.670336537361145 accuracy 0.23600000000000002
+
+Test loss 1.679739785572839 accuracy 0.188
+
+Question:How far is it from Denver to Aspen ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:What county is Modesto , California in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.62
+Question:Who was Galileo ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.46
+Question:What is an atom ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:When did Hawaii become a state ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:How tall is the Sears Building ?
+Predicted Type:HUM
+Actual Type:NUM
+Certainty:0.4
+Question:George Bush purchased a small interest in which baseball team ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.62
+Question:Why does the moon turn orange ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What is autism ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:What city had a world fair in 1900 ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.64
+Question:What person 's head is on a dime ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.54
+Question:What is the average weight of a Yellow Labrador ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:Who was the first man to fly across the Pacific Ocean ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.54
+Question:When did Idaho become a state ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.68
+Question:What is the life expectancy for crickets ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.48
+Question:Who developed the vaccination against polio ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.46
+Question:What is epilepsy ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What year did the Titanic sink ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.46
+Question:Who was the first American to walk in space ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.52
+Question:What is a biosphere ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:What river in the US is known as the Big Muddy ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:What is bipolar disorder ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.48
+Question:What is cholesterol ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.4
+Question:Who developed the Macintosh computer ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:What is caffeine ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What imaginary line is halfway between the North and South Poles ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:Where is John Wayne airport ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.68
+Question:What hemisphere is the Philippines in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:What is the average speed of the horses at the Kentucky Derby ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.64
+Question:Where are the Rocky Mountains ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.5
+Question:What are invertebrates ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:What is the temperature at the center of the earth ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.64
+Question:When did John F. Kennedy get elected as President ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.66
+Question:How old was Elvis Presley when he died ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:Where is the Orinoco River ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.46
+Question:How far is the service line from the net in tennis ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:How much fiber should you have per day ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:How many Great Lakes are there ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.44
+Question:What is Teflon ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What is amitriptyline ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:What is a shaman ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:How long did Rip Van Winkle sleep ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:What are triglycerides ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.46
+Question:How many liters in a gallon ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:What is the name of the chocolate company in San Francisco ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.52
+Question:What are amphibians ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:Who discovered x-rays ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.58
+Question:Which comedian 's signature line is `` Can we talk '' ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.6
+Question:What is fibromyalgia ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What is done with worn or outdated flags ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.64
+Question:What does cc in engines mean ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:When did Elvis Presley die ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:What is the capital of Yugoslavia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.58
+Question:Where is Milan ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.5
+Question:What is the speed hummingbirds fly ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:What is the oldest city in the United States ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.64
+Question:What was W.C. Fields ' real name ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.62
+Question:What river flows between Fargo , North Dakota and Moorhead , Minnesota ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.5
+Question:What state did the Battle of Bighorn take place in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:Who was Abraham Lincoln ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.54
+Question:What are spider veins ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:What day and month did John Lennon die ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.68
+Question:What strait separates North America from Asia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.66
+Question:What is the population of Seattle ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:How much was a ticket for the Titanic ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.58
+Question:What is the largest city in the world ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.74
+Question:What American composer wrote the music for `` West Side Story '' ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.58
+Question:Where is the Mall of the America ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.62
+Question:What is the pH scale ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.44
+Question:How tall is the Gateway Arch in St. Louis , MO ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.74
+Question:How much does the human adult female brain weigh ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:Who was the first governor of Alaska ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.48
+Question:What is a prism ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.48
+Question:When was the first liver transplant ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:Who was elected president of South Africa in 1994 ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.52
+Question:What is the population of China ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.58
+Question:When was Rosa Parks born ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:Why is a ladybug helpful ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What is amoxicillin ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.46
+Question:Who was the first female United States Representative ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.52
+Question:What are xerophytes ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What country did Ponce de Leon come from ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:What is desktop publishing ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:What is the temperature of the sun 's surface ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:What year did Canada join the United Nations ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:What is the oldest university in the US ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:Where is Prince Edward Island ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:Mercury , what year was it discovered ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.48
+Question:What is cryogenics ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.62
+Question:What are coral reefs ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.36
+Question:What is neurology ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:Who invented the calculator ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.66
+Question:How do you measure earthquakes ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:Who is Duke Ellington ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.48
+Question:What county is Phoenix , AZ in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:What is a micron ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.44
+Question:The sun 's core , what is the temperature ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.44
+Question:When were William Shakespeare 's twins born ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.76
+Question:What is the highest dam in the U.S. ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:What is acupuncture ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:What is the length of the coastline of the state of Alaska ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.66
+Question:What is the name of Neil Armstrong 's wife ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.62
+Question:Who won Ms. American in 1989 ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.4
+Question:When did the Hindenberg crash ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.42
+Question:What was the last year that the Chicago Cubs won the World Series ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.58
+Question:Where is Perth ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:What year did WWII begin ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:What is the diameter of a golf ball ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:What is an eclipse ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:Who discovered America ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.62
+Question:What is the earth 's diameter ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:Which president was unmarried ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.54
+Question:How wide is the Milky Way galaxy ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:During which season do most thunderstorms occur ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:What is Wimbledon ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is the gestation period for a cat ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.64
+Question:How far is a nautical mile ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:Who was the abolitionist who led the raid on Harper 's Ferry in 1859 ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.44
+Question:What does target heart rate mean ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.72
+Question:What is foreclosure ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:Where is the Holland Tunnel ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.6
+Question:Who wrote the hymn `` Amazing Grace '' ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.5
+Question:What position did Willie Davis play in baseball ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:What are platelets ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:What is severance pay ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:Where are the National Archives ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.68
+Question:What is poliomyelitis ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:Who is a German philosopher ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.5
+Question:What does Phi Beta Kappa mean ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:What is nicotine ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.44
+Question:Who discovered radium ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:What are sunspots ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:When was Algeria colonized ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:What baseball team was the first to make numbers part of their uniform ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.58
+Question:What continent is Egypt on ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.46
+Question:What is the capital of Mongolia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.48
+Question:What is nanotechnology ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.68
+Question:In the late 1700 's British convicts were used to populate which colony ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.46
+Question:What state is the geographic center of the lower 48 states ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:What is an obtuse angle ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What are polymers ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.62
+Question:When is hurricane season in the Caribbean ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:Where is the volcano Mauna Loa ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.42
+Question:What peninsula is Spain part of ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.62
+Question:When was Lyndon B. Johnson born ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.58
+Question:What is acetaminophen ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What state has the least amount of rain per year ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.66
+Question:Who founded American Red Cross ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:What year did the Milwaukee Braves become the Atlanta Braves ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:How fast is alcohol absorbed ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:When is the summer solstice ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:What is supernova ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:Where is the Shawnee National Forest ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.64
+Question:What U.S. state 's motto is `` Live free or Die '' ?
+Predicted Type:HUM
+Actual Type:LOC
+Certainty:0.44
+Question:Where is the Lourve ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.46
+Question:When was the first stamp issued ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:How far is Pluto from the sun ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.58
+Question:What body of water are the Canary Islands in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:What is neuropathy ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:Where is the Euphrates River ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:What is cryptography ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:Who is the Prime Minister of Canada ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.54
+Question:What French ruler was defeated at the battle of Waterloo ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.42
+Question:What is leukemia ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:Where did Howard Hughes die ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.64
+Question:What is the distance in miles from the earth to the sun ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.48
+Question:What is the average life span for a chicken ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:When was the first Wal-Mart store opened ?
+Predicted Type:HUM
+Actual Type:NUM
+Certainty:0.42
+Question:What is relative humidity ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:What city has the zip code of 35824 ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.76
+Question:Who invented the hula hoop ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.6
+Question:What city 's newspaper is called `` The Enquirer '' ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.6
+Question:Who invented the slinky ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:What is the melting point of copper ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.66
+Question:Where is the volcano Olympus Mons located ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.5
+Question:Who was the 23rd president of the United States ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.52
+Question:What is the average body temperature ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:What does a defibrillator do ?
+Predicted Type:HUM
+Actual Type:DESC
+Certainty:0.46
+Question:What is the effect of acid rain ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What year did the United States abolish the draft ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:How fast is the speed of light ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.66
+Question:What province is Montreal in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.42
+Question:What New York City structure is also known as the Twin Towers ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:What is fungus ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is sodium chloride ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.44
+Question:How many pounds in a ton ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:What is influenza ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What is ozone depletion ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What year was the Mona Lisa painted ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.46
+Question:What does `` Sitting Shiva '' mean ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:Which mountain range in North America stretches from Maine to Georgia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.66
+Question:What is the population of Nigeria ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.46
+Question:What does your spleen do ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.64
+Question:Where is the Grand Canyon ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.68
+Question:Who invented the telephone ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.6
+Question:What year did the U.S. buy Alaska ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:What is the name of the leader of Ireland ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.66
+Question:What is phenylalanine ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:How many gallons of water are there in a cubic foot ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.48
+Question:What is sonar ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:In Poland , where do most people live ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.6
+Question:What is phosphorus ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What is the location of the Sea of Tranquility ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:How fast is sound ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.58
+Question:What French province is cognac produced in ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.5
+Question:What is Valentine 's Day ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What causes gray hair ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is hypertension ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What is bandwidth ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:What is the longest suspension bridge in the U.S. ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.62
+Question:What is a parasite ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What is home equity ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.48
+Question:What do meteorologists do ?
+Predicted Type:HUM
+Actual Type:DESC
+Certainty:0.4
+Question:Who is the tallest man in the world ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.48
+Question:What are the twin cities ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.6
+Question:What is pilates ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What planet is known as the `` red '' planet ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.6
+Question:What is the depth of the Nile river ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.48
+Question:What is Mardi Gras ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.66
+Question:Mexican pesos are worth what in U.S. dollars ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:Who was the first African American to play for the Brooklyn Dodgers ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:Who was the first Prime Minister of Canada ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.46
+Question:How many Admirals are there in the U.S. Navy ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.64
+Question:How old was Joan of Arc when she died ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:What does the word fortnight mean ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is dianetics ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.38
+Question:What is the capital of Ethiopia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.46
+Question:For how long is an elephant pregnant ?
+Predicted Type:HUM
+Actual Type:NUM
+Certainty:0.38
+Question:How did Janice Joplin die ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.44
+Question:What is the difference between AM radio stations and FM radio stations ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.46
+Question:What is osteoporosis ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:Who was the first woman governor in the U.S. ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.52
+Question:What is peyote ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is the esophagus used for ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.64
+Question:What is viscosity ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:What year did Oklahoma become a state ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:What is the abbreviation for Texas ?
+Predicted Type:ENTY
+Actual Type:ABBR
+Certainty:0.7
+Question:Where on the body is a mortarboard worn ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.58
+Question:What was J.F.K. 's wife 's name ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.58
+Question:What does I.V. stand for ?
+Predicted Type:ENTY
+Actual Type:ABBR
+Certainty:0.52
+Question:What is the chunnel ?
+Predicted Type:HUM
+Actual Type:DESC
+Certainty:0.4
+Question:Where is Hitler buried ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:What are antacids ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What is pulmonary fibrosis ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What are Quaaludes ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.66
+Question:What is naproxen ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.48
+Question:What is strep throat ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.48
+Question:What is the largest city in the U.S. ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:What is the life expectancy of a dollar bill ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:What are Aborigines ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:What is hybridization ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:How old do you have to be in order to rent a car in Italy ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.58
+Question:What does USPS stand for ?
+Predicted Type:ENTY
+Actual Type:ABBR
+Certainty:0.6
+Question:What year did the NFL go on strike ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:What is solar wind ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.62
+Question:What date did Neil Armstrong land on the moon ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:When was Hiroshima bombed ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:Where is the Savannah River ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:Who was the first woman killed in the Vietnam War ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.44
+Question:What planet has the strongest magnetic field of all the planets ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:Who is the governor of Alaska ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.6
+Question:What year did Mussolini seize power in Italy ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:What is the capital of Persia ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.5
+Question:Where is the Eiffel Tower ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:How many hearts does an octopus have ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:What is pneumonia ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What is the deepest lake in the US ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.62
+Question:What is a fuel cell ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:Who was the first U.S. president to appear on TV ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:Where is the Little League Museum ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:What is the brightest star ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:What is diabetes ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.42
+Question:When was President Kennedy shot ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:What is TMJ ?
+Predicted Type:ENTY
+Actual Type:ABBR
+Certainty:0.64
+Question:What date was Dwight D. Eisenhower born ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.48
+Question:What does the technical term ISDN mean ?
+Predicted Type:ENTY
+Actual Type:ABBR
+Certainty:0.54
+Question:Why is the sun yellow ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What is the conversion rate between dollars and pounds ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:When was Abraham Lincoln born ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:What is the Milky Way ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.62
+Question:What is mold ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What year was Mozart born ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.58
+Question:What is the melting point of gold ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.66
+Question:What is the street address of the White House ?
+Predicted Type:HUM
+Actual Type:LOC
+Certainty:0.5
+Question:What is semolina ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.48
+Question:What is Ursa Major ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:What is the percentage of water content in the human body ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:How much does water weigh ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:What is the murder rate in Windsor , Ontario ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.68
+Question:Who is the only president to serve 2 non-consecutive terms ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.58
+Question:What is the population of Australia ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:Who painted the ceiling of the Sistine Chapel ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.54
+Question:What is the effect of volcanoes on the climate ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What year did the Andy Griffith show begin ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:What is acid rain ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is the date of Mexico 's independence ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:What is the location of Lake Champlain ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:What is quicksilver ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.64
+Question:Who wrote `` The Divine Comedy '' ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.64
+Question:What is the speed of light ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:What is the width of a football field ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:Why in tennis are zero points called love ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is a thyroid ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:What does ciao mean ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:How often does Old Faithful erupt at Yellowstone National Park ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:What is acetic acid ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.48
+Question:What is the elevation of St. Louis , MO ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:What is the Moulin Rouge ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What soviet seaport is on the Black Sea ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.66
+Question:What is the atomic weight of silver ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:What are pathogens ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.68
+Question:What is mad cow disease ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:When did North Carolina enter the union ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.5
+Question:Where do apple snails live ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.62
+Question:What are ethics ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.42
+Question:What does CPR stand for ?
+Predicted Type:ENTY
+Actual Type:ABBR
+Certainty:0.42
+Question:What is an annuity ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:Who killed John F. Kennedy ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.58
+Question:Who was the first US President to ride in an automobile to his inauguration ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.48
+Question:How old was the youngest president of the United States ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:When was Ulysses S. Grant born ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:What is Muscular Dystrophy ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:Who lived in the Neuschwanstein castle ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.52
+Question:What is propylene glycol ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is a panic disorder ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:Who invented the instant Polaroid camera ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.64
+Question:What is a carcinogen ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.74
+Question:What is the world 's population ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.66
+Question:What is nepotism ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:What is die-casting ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.46
+Question:What is myopia ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.42
+Question:What is the sales tax rate in New York ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:Developing nations comprise what percentage of the world 's population ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:What is the fourth highest mountain in the world ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:What is Shakespeare 's nickname ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.66
+Question:When is Father 's Day ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.58
+Question:What does the acronym NASA stand for ?
+Predicted Type:ENTY
+Actual Type:ABBR
+Certainty:0.64
+Question:How long is the Columbia River in miles ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.66
+Question:What city 's newspaper is called `` The Star '' ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.7
+Question:What is carbon dioxide ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:Where is the Mason/Dixon line ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.58
+Question:When was the Boston tea party ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:What is metabolism ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+Question:Which U.S.A. president appeared on `` Laugh-In '' ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.6
+Question:What is the capital of Zimbabwe ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:What does NASA stand for ?
+Predicted Type:ENTY
+Actual Type:ABBR
+Certainty:0.54
+Question:What are semiconductors ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is nuclear power ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.4
+Question:What is a tsunami ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:Who is the congressman from state of Texas on the armed forces committee ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.6
+Question:Who was president in 1913 ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.64
+Question:When was the first kidney transplant ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.52
+Question:What are Canada 's two territories ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.58
+Question:What is genocide ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.4
+Question:What continent is Argentina on ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:What is an earthquake ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:Where is the tallest roller coaster located ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:What are enzymes ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.62
+Question:Who discovered oxygen ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:What is bangers and mash ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.78
+Question:Where are the British crown jewels kept ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.5
+Question:Who was the first person to reach the North Pole ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.56
+Question:What is an ulcer ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.46
+Question:What is vertigo ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What is the spirometer test ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.62
+Question:When is the official first day of summer ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:What does the abbreviation SOS mean ?
+Predicted Type:ENTY
+Actual Type:ABBR
+Certainty:0.42
+Question:Who invented Trivial Pursuit ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.52
+Question:Which country has the most water pollution ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.46
+Question:Who is the actress known for her role in the movie `` Gypsy '' ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.64
+Question:What is the rainiest place on Earth ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.58
+Question:Who was the first African American to win the Nobel Prize in literature ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.5
+Question:When is St. Patrick 's Day ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:When was Thomas Jefferson born ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.6
+Question:How cold should a refrigerator be ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.62
+Question:When was the telephone invented ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.38
+Question:Where was the first golf course in the United States ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.5
+Question:What is schizophrenia ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.56
+Question:What is angiotensin ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.54
+Question:What did Jesse Jackson organize ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.54
+Question:What is the National Park in Utah ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.56
+Question:What is Susan B. Anthony 's birthday ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.56
+Question:In which state would you find the Catskill Mountains ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.7
+Question:What are pediatricians ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.6
+Question:What chain store is headquartered in Bentonville , Arkansas ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.54
+Question:What are solar cells ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.48
+Question:What is compounded interest ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.64
+Question:What are capers ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.48
+Question:What is an antigen ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.58
+Question:What is the population of Venezuela ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.68
+Question:What is a thermometer ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.42
+Question:What Canadian city has the largest population ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.54
+Question:Which country gave New York the Statue of Liberty ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.7
+Question:What is rheumatoid arthritis ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.62
+Question:What river runs through Rowe , Italy ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.52
+Question:What is cerebral palsy ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.62
+Question:What city is also known as `` The Gateway to the West '' ?
+Predicted Type:ENTY
+Actual Type:LOC
+Certainty:0.72
+Question:How far away is the moon ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.54
+Question:What is pectin ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What is bio-diversity ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.52
+Question:What year did the Titanic start on its journey ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.48
+Question:How much of an apple is water ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.48
+Question:Who was the 22nd President of the US ?
+Predicted Type:ENTY
+Actual Type:HUM
+Certainty:0.48
+Question:How many feet in a mile ?
+Predicted Type:ENTY
+Actual Type:NUM
+Certainty:0.48
+Question:What is e-coli ?
+Predicted Type:ENTY
+Actual Type:DESC
+Certainty:0.5
+HUM precision: 0.1111111111111111 average certainty: 0.4244444444444444 # of times predicted: 9
+ # of times actual: 65 recall: 0.015384615384615385
+LOC precision: -1 average certainty: -1 # of times predicted: 0
+ # of times actual: 81 recall: 0.0
+ENTY precision: 0.19144602851323828 average certainty: 0.5559674134419555 # of times predicted: 491
+ # of times actual: 94 recall: 1.0
+ABBR precision: -1 average certainty: -1 # of times predicted: 0
+ # of times actual: 9 recall: 0.0
+DESC precision: -1 average certainty: -1 # of times predicted: 0
+ # of times actual: 138 recall: 0.0
+NUM precision: -1 average certainty: -1 # of times predicted: 0
+ # of times actual: 113 recall: 0.0
+Uncertainty difference: 0.53088
+Uncertainty difference for fail: 0.552148148148148
+Uncertainty difference for success: 0.4402105263157897
+Average precision (every class equal): -0.6162404767292751
+Average recall (every class equal): 0.1692307692307692
+Average certainty (every class equal): -0.5032646903522667
+Average certainty: 0.5536000000000003
+Accuracy: 0.19
