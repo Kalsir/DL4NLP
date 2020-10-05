@@ -4,7 +4,7 @@ Question classification on TREC-6 dataset.
 Installation:
 - create environment using environment.yml: conda env create
 - activate environment: conda activate question_classification
-- install transformers package in environment: pip install transformers
+- install Hugging Face transformers package in environment: pip install transformers
 - download better_lstm fork on my github
 - open the environment in better_lstm folder and add better_lstm using: conda develop .
 - run code using: python question_classification.py
